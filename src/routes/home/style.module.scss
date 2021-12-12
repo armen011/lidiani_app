@@ -5,12 +5,14 @@
     width: 100%;
     .imgWrapper {
       width: 100%;
-      background-color: red;
       display: flex;
       justify-content: center;
       overflow: hidden;
       img {
-        width: 100%;
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -23,6 +25,7 @@
       overflow-y: hidden;
       img {
         width: 100%;
+        object-fit: cover;
       }
       &:hover {
         transform: scale(1.05);

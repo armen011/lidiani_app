@@ -6,8 +6,8 @@ export default function Women() {
   return (
     <div className={style.mainContainer}>
       {womenDresses.map(({ id, img, title, subTitle, price }, key) => (
-        <div className={style.itemContainer}>
-          <div className={style.imgWrapper} key={key}>
+        <div className={style.itemContainer} key={key}>
+          <div className={style.imgWrapper}>
             <img src={img} alt="" />
           </div>
           <div className={style.contenteWrapper}>

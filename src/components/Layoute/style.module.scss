@@ -1,7 +1,6 @@
 @import "../../style/main.scss";
 .container {
   width: 100%;
-  height: 900px;
   position: relative;
   padding-left: 90px;
   .children {
@@ -130,5 +129,71 @@
     color: white;
     font-size: 42px;
     writing-mode: vertical-lr;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding-left: 60px;
+    .children {
+      .navBar {
+        width: 300px;
+        .linkContainer {
+          height: 180px;
+          .linkText {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+  .leftSideMenu {
+    width: 60px;
+    .appName {
+      font-size: 27px;
+      padding-left: 2px;
+    }
+    button {
+      background: none;
+      border: none;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      padding: 0;
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+  .container {
+    padding-top: 50px;
+    padding-left: 0;
+    .children {
+      .navBar {
+        width: 100%;
+      }
+    }
+  }
+  .leftSideMenu {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    padding-top: 20px;
+    button {
+      right: 10px !important;
+      position: relative;
+    }
+    .appName {
+      writing-mode: horizontal-tb;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
   }
 }

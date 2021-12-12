@@ -13,23 +13,28 @@ const HomePage = () => {
   return (
     <div className={style.homePage}>
       <Carousel autoplay>
-        {carouselContent.map(({ id, img, category }) => (
+        {carouselContent.map(({ id, img, category }, key) => (
           <div
             className={style.carouselItem}
             onClick={() => {
               navigate(`${category}/${id}`);
             }}
+            key={key}
           >
-            <div className={style.imgWrapper} style={{ width: "100%", height }}>
-              <img src={img} />
+            <div
+              className={style.imgWrapper}
+              style={{ width: "100%", height }}
+              key={key}
+            >
+              <img src={img} alt="" />
             </div>
           </div>
         ))}
       </Carousel>
       <div className={style.topTree} style={{ width: "100%", height }}>
-        {topTree.map(({ id, catgory, img }) => (
-          <div className={style.dresses}>
-            <img src={img} />
+        {topTree.map(({ id, catgory, img }, key) => (
+          <div className={style.dresses} key={key}>
+            <img src={img} alt="" />
           </div>
         ))}
       </div>

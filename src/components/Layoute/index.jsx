@@ -1,16 +1,25 @@
-import React, { useState } from "react";
-import { Drawer, Button } from "antd";
+import React, { useContext, useRef, useState } from "react";
 import style from "./style.module.scss";
 import { Link } from "react-router-dom";
+import { useOutsideClick } from "../../hooks/index";
+import { dimmisonContext } from "../../App";
 
 const Layoute = ({ children }) => {
   const [visible, setVisible] = useState(false);
+  const menuRef = useRef(null);
+  const navbarRef = useRef(null);
+  const [width, height] = useContext(dimmisonContext);
+
+  const callBack = () => setVisible(false);
+
+  useOutsideClick(menuRef, navbarRef, callBack);
+
   const showDrawer = () => {
     setVisible(!visible);
   };
   return (
     <>
-      <div className={style.leftSideMenu}>
+      <div className={style.leftSideMenu} ref={menuRef}>
         <span className={style.appName}>Լիդիանի</span>
         <button className="menu" onClick={showDrawer} aria-label="Main Menu">
           <svg width="40" height="40" viewBox="0 0 100 100">
@@ -29,9 +38,12 @@ const Layoute = ({ children }) => {
           </svg>
         </button>
       </div>
-      <div className={style.container}>
+      <div className={style.container} style={{ height }}>
         <div className={style.children}>
-          <div className={visible ? style.navBar : style.navBarHide}>
+          <div
+            className={visible ? style.navBar : style.navBarHide}
+            ref={navbarRef}
+          >
             {visible && (
               <div className={style.linkContainer}>
                 <Link to="/" className={style.linkText}>
