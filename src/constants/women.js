@@ -8,6 +8,7 @@ const womenDresses = [
     title: "Երեկոյան զգեստ",
     subTitle: "Հետո սպես բլոկ ",
     price: "$45",
+    allPhotos: [first, first, first, first, first, first],
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const womenDresses = [
     title: "Երեկոյան զգեստ",
     subTitle: "Հետո սպես բլոկ ",
     price: "$45",
+    allPhotos: [first, first, first, first, first, first],
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const womenDresses = [
     title: "Երեկոյան զգեստ",
     subTitle: "Հետո սպես բլոկ ",
     price: "$45",
+    allPhotos: [first, first, first, first, first, first],
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ const womenDresses = [
     title: "Երեկոյան զգեստ",
     subTitle: "Հետո սպես բլոկ ",
     price: "$45",
+    allPhotos: [first, first, first, first, first, first],
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ const womenDresses = [
     title: "Երեկոյան զգեստ",
     subTitle: "Հետո սպես բլոկ ",
     price: "$45",
+    allPhotos: [first, first, first, first, first, first],
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ const womenDresses = [
     title: "Երեկոյան զգեստ",
     subTitle: "Հետո սպես բլոկ ",
     price: "$45",
+    allPhotos: [first, first, first, first, first, first],
   },
 ];
 export default womenDresses;
