@@ -39,7 +39,12 @@ const HomePage = () => {
           </div>
         ))}
       </div>
-      <MessengerCustomerChat pageId="107943368276671" appId="476200953861310" />
+      <MessengerCustomerChat
+        pageId="107943368276671"
+        appId="476200953861310"
+        welcome_screen_greeting="Hello World"
+        theme_color="4bd108"
+      />
     </div>
   );
 };
