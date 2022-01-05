@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import { dimmisonContext } from "../../App";
 import { Carousel } from "antd";
 import carouselContent from "../../constants/carousel";
@@ -38,6 +39,7 @@ const HomePage = () => {
           </div>
         ))}
       </div>
+      <MessengerCustomerChat pageId="107943368276671" appId="476200953861310" />
     </div>
   );
 };
