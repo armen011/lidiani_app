@@ -27,3 +27,4 @@ const carouselContent = [
   },
 ];
 export default carouselContent;
+
