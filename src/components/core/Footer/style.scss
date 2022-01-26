@@ -1,0 +1,78 @@
+.main_footer {
+  width: 100%;
+  height: 583px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 119px 184px 72px 184px;
+  background: white;
+  .info_text {
+    width: 35%;
+    height: 100%;
+    position: relative;
+    .info_text_title {
+      width: 300px;
+      height: 48px;
+      margin-bottom: 48px;
+      span {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 48px;
+        color: #333333;
+      }
+    }
+    .info_text_with_icon {
+      width: 100%;
+      height: 32px;
+      margin-bottom: 24px;
+      display: flex;
+      span {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        color: #333333;
+        margin-left: 16px;
+      }
+    }
+    .info_text_insta_fb {
+      width: 100%;
+      height: 64px;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      .icon_text_href {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        span {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          color: #828282;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+  .info_map {
+    width: 62%;
+    height: 100%;
+    background: rgb(204, 197, 197);
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}

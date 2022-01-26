@@ -1,16 +1,22 @@
-import React, { useContext } from "react";
+import React from "react";
 import Button from "../../../components/core/Button";
 import pic from "../../../assets/img/first.webp";
 import useWindowDimiisions from "../../../hooks";
-import "./style.scss";
 import Icon from "../../../components/core/Icon";
+import "./style.scss";
+import aboutPic from "../../../assets/img/about.jpeg";
 
-const HomePage = () => {
+const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
   const [width, height] = useWindowDimiisions();
   const sectionStyle = { width, height: height - 80 };
+
   return (
     <>
-      <div className="section_container first_section" style={sectionStyle}>
+      <div
+        className="section_container first_section"
+        style={sectionStyle}
+        ref={homeRef}
+      >
         <div className="info_bar">
           <div className="info_texts">
             <span>
@@ -62,7 +68,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="about_section" style={sectionStyle}>
+      <div className="about_section" style={sectionStyle} ref={aboutRef}>
         <div className="about_text">
           <h3>Մեր Մասին</h3>
           <span>
@@ -78,7 +84,7 @@ const HomePage = () => {
           </span>
         </div>
         <div className="about_pic_wrapper">
-          <img src="" alt="" />
+          <img src={aboutPic} alt="" />
         </div>
       </div>
       <div className="info_about_our_clients">
@@ -91,4 +97,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default React.memo(HomePage);
