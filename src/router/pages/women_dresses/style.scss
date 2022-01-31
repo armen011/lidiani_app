@@ -1,0 +1,12 @@
+.hole_page_container {
+  width: 100%;
+  min-height: 700px;
+  background: #e5e5e5;
+  .items_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #f7f5f2;
+  }
+}
