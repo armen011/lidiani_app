@@ -31,7 +31,19 @@
   .slider_wrapper {
     width: 63%;
     height: 100%;
-    background-color: indianred;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      max-width: 100vw;
+    }
+    div {
+      opacity: 0;
+      transition: 300ms;
+    }
+    &:hover div {
+      opacity: 1;
+    }
   }
 }
 .second_section {

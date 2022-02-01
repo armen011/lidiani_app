@@ -5,6 +5,7 @@ import useWindowDimiisions from "../../../hooks";
 import Icon from "../../../components/core/Icon";
 import "./style.scss";
 import aboutPic from "../../../assets/img/about.jpeg";
+import Slider from "../../../components/core/Slider";
 
 const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
   const [width, height] = useWindowDimiisions();
@@ -25,7 +26,7 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
           </div>
           <Button type="secondary" text="Տեսնել ավելին" />
         </div>
-        <div className="slider_wrapper">hell</div>
+        <Slider className="slider_wrapper" />
       </div>
       <div className="section_container second_section" style={sectionStyle}>
         <div className="top_tree_title_wrapper">

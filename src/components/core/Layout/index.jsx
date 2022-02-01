@@ -109,8 +109,9 @@ const LayoutWhithHeader = ({ childrenFunc }) => {
         >
           <img src={womenPic} alt="" />
           <div
-            className="category_container_hover"
-            style={{ opacity: active === "women" ? "1" : "0" }}
+            className={`category_container_hover ${
+              active === "women" && "selected"
+            }`}
           >
             <span>Կանացի</span>
           </div>
@@ -125,10 +126,9 @@ const LayoutWhithHeader = ({ childrenFunc }) => {
         >
           <img src={babyPic} alt="" />
           <div
-            className="category_container_hover"
-            style={{
-              opacity: active === "baby" ? "1" : "0",
-            }}
+            className={`category_container_hover ${
+              active === "baby" && "selected"
+            }`}
           >
             <span>Մանկական</span>
           </div>
