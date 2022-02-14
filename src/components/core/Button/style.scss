@@ -5,11 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 0;
+  background: none;
   cursor: pointer;
   &:focus {
     outline: none;
   }
-  background-color: yellowgreen;
 }
 .secondary_btn {
   width: 227px;
@@ -42,4 +43,20 @@
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.order_button {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #45cc95;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
 }

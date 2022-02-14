@@ -10,15 +10,21 @@ const Routing = () => {
   return (
     <Router>
       <Layout
-        childrenFunc={(props) => (
+        childrenFunc={({ handleOpenModal, ...otherProps }) => (
           <>
             <Routes>
-              <Route path="/" exact element={<Home {...props} />} />
+              <Route path="/" exact element={<Home {...otherProps} />} />
               <Route path="/women_dresses" exact element={<WomenDresses />} />
               <Route
                 path="/women_dresses/:dressId"
                 exact
-                element={<CurrentDress />}
+                element={
+                  <CurrentDress
+                    {...{
+                      handleOpenModal,
+                    }}
+                  />
+                }
               />
               <Route path="/baby_dresses" exact element={<BabyDresses />} />
             </Routes>

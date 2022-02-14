@@ -8,11 +8,14 @@ import womenPic from "../../../assets/img/women.png";
 import babyPic from "../../../assets/img/baby.png";
 import Icon from "../Icon";
 import Footer from "../Footer";
+import Modal from "../Modal";
+import { AnimatePresence } from "framer-motion";
 
 const LayoutWhithHeader = ({ childrenFunc }) => {
   const [width, height] = useWindowDimiisions();
   const [isSubBarOpened, setIsSubBarOpened] = useState(false);
   const [active, setActive] = useState("home");
+  const [modalOpened, setModalOpened] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const homeRef = useRef(null);
@@ -44,6 +47,15 @@ const LayoutWhithHeader = ({ childrenFunc }) => {
 
   return (
     <div className="full_page_wrapper">
+      <AnimatePresence exitBeforeEnter={true}>
+        {modalOpened && (
+          <Modal
+            modalOpened={modalOpened}
+            handleClose={() => setModalOpened(false)}
+          />
+        )}
+      </AnimatePresence>
+
       <div className="header">
         <div className="logo_wrapper">
           <img src={logo} alt="lidiani" />
@@ -142,6 +154,7 @@ const LayoutWhithHeader = ({ childrenFunc }) => {
           homeRef,
           aboutRef,
           deliveryRef,
+          handleOpenModal: () => setModalOpened(true),
         })}
         <Footer ref={contactRef} />
       </div>

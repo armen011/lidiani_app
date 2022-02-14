@@ -39,7 +39,6 @@ export const images = [
 const Slider = ({ className }) => {
   const [[page, direction], setPage] = useState([0, 0]);
 
-  //   const imageIndex = wrap(0, images.length, page);
 
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
