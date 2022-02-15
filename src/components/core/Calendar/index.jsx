@@ -1,11 +1,10 @@
 import React from "react";
-import { getCalendarData } from "./helpers.calndar";
+// import { getCalendarData } from "./helpers.calndar";
 
 import "./style.scss";
 
 const Calendar = () => {
-  const date = getCalendarData();
-  console.log("date", date.cels);
+  // const date = getCalendarData();
   return (
     <div className="calendar_content_wrapper">
       <div className="calendar_navbar"></div>

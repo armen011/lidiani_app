@@ -12,8 +12,8 @@ import Modal from "../Modal";
 import { AnimatePresence } from "framer-motion";
 
 const LayoutWhithHeader = ({ childrenFunc }) => {
-  const [width, height] = useWindowDimiisions();
   const [isSubBarOpened, setIsSubBarOpened] = useState(false);
+  const [isMenuBarOpened, setIsMenuBarOpened] = useState(false);
   const [active, setActive] = useState("home");
   const [modalOpened, setModalOpened] = useState(false);
   const navigate = useNavigate();
@@ -103,6 +103,64 @@ const LayoutWhithHeader = ({ childrenFunc }) => {
             Առաքում և պայմաններ
           </li>
         </ul>
+        <button
+          className={
+            isMenuBarOpened
+              ? "hamburger_wrapper_opened"
+              : "hamburger_wrapper_closed"
+          }
+          onClick={() => setIsMenuBarOpened((prev) => !prev)}
+        >
+          <div />
+        </button>
+      </div>
+      <div className={`navbar_mobile ${isMenuBarOpened && "opened"}`}>
+        <span className="menu_title">Մենյու</span>
+        <li
+          className={`link_button ${active === "home" && "active"}`}
+          onClick={goTo(homeRef, "home")}
+        >
+          Հիմնական էջ
+        </li>
+        <li
+          className={`link_button ${active === "about" && "active"}`}
+          onClick={goTo(aboutRef, "about")}
+        >
+          Մեր մասին
+        </li>
+        <li
+          className={`link_button ${
+            (active === "women" || active === "baby") && "active"
+          }`}
+          onClick={() => setIsSubBarOpened(!isSubBarOpened)}
+        >
+          Երեկոյան Զգեստներ
+          <Icon
+            iconName="dropdown_arrow"
+            width={24}
+            height={24}
+            className="arrow"
+            style={{
+              transform: isSubBarOpened ? "rotate(0)" : "rotate(90deg)",
+            }}
+          />
+        </li>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+        <li
+          className={`link_button ${active === "contact" && "active"}`}
+          onClick={goTo(contactRef, "contact")}
+        >
+          Հետադարձ կապ
+        </li>
+        <li
+          className={`link_button ${active === "terms" && "active"}`}
+          onClick={goTo(deliveryRef, "terms")}
+        >
+          Առաքում և պայմաններ
+        </li>
       </div>
       <div
         className={
@@ -146,10 +204,7 @@ const LayoutWhithHeader = ({ childrenFunc }) => {
           </div>
         </div>
       </div>
-      <div
-        className="children_container"
-        style={{ width, height: height - 80 }}
-      >
+      <div className="children_container">
         {childrenFunc({
           homeRef,
           aboutRef,

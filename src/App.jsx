@@ -1,5 +1,4 @@
 import "./App.css";
-import "antd/dist/antd.css";
 import Routes from "./router";
 import useWindowDimiisions from "./hooks/index";
 import React, { createContext } from "react";

@@ -1,23 +1,15 @@
 import React from "react";
 import Button from "../../../components/core/Button";
 import pic from "../../../assets/img/first.webp";
-import useWindowDimiisions from "../../../hooks";
 import Icon from "../../../components/core/Icon";
 import "./style.scss";
 import aboutPic from "../../../assets/img/about.jpeg";
 import Slider from "../../../components/core/Slider";
 
 const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
-  const [width, height] = useWindowDimiisions();
-  const sectionStyle = { width, height: height - 80 };
-
   return (
     <>
-      <div
-        className="section_container first_section"
-        style={sectionStyle}
-        ref={homeRef}
-      >
+      {/* <div className="first_section" ref={homeRef}>
         <div className="info_bar">
           <div className="info_texts">
             <span>
@@ -27,8 +19,8 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
           <Button type="secondary" text="Տեսնել ավելին" />
         </div>
         <Slider className="slider_wrapper" />
-      </div>
-      <div className="section_container second_section" style={sectionStyle}>
+      </div> */}
+      {/* <div className="second_section">
         <div className="top_tree_title_wrapper">
           <span>Ամենաշատ Հավանած</span>
         </div>
@@ -52,8 +44,8 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="additional_info_bar">
+      </div> */}
+      {/* <div className="additional_info_bar">
         <div className="info_container">
           <Icon iconName="additional_info_customer" width={128} height={128} />
           <div className="info_text_container">
@@ -68,8 +60,8 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
             <span>Զգեստներ</span>
           </div>
         </div>
-      </div>
-      <div className="about_section" style={sectionStyle} ref={aboutRef}>
+      </div> */}
+      {/* <div className="about_section" ref={aboutRef}>
         <div className="about_text">
           <h3>Մեր Մասին</h3>
           <span>
@@ -87,13 +79,13 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
         <div className="about_pic_wrapper">
           <img src={aboutPic} alt="" />
         </div>
-      </div>
-      <div className="info_about_our_clients">
+      </div> */}
+      {/* <div className="info_about_our_clients">
         <div className="text_wrapper_about_clients">
           <p>Մեր Հաճախորդները Նրբաճաշակ են և Նորաոճ </p>
         </div>
         <div className="icon_container_clients"></div>
-      </div>
+      </div> */}
     </>
   );
 };
