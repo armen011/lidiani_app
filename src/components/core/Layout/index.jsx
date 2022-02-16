@@ -145,9 +145,37 @@ const LayoutWhithHeader = ({ childrenFunc }) => {
             }}
           />
         </li>
-        <ul>
-          <li></li>
-          <li></li>
+        <ul
+          className={`sub_bar_wrapper ${!isSubBarOpened && "sub_bar_closed"}`}
+        >
+          <li
+            className="category_container_mobile"
+            onClick={() => {
+              setIsSubBarOpened(false);
+              setIsMenuBarOpened(false);
+              navigate("/women_dresses");
+              setActive("women");
+            }}
+          >
+            <img src={womenPic} alt="" />
+            <div className={`category_container_hover`}>
+              <span>Կանացի</span>
+            </div>
+          </li>
+          <li
+            className="category_container_mobile"
+            onClick={() => {
+              setIsSubBarOpened(false);
+              setIsMenuBarOpened(false);
+              navigate("/baby_dresses");
+              setActive("baby");
+            }}
+          >
+            <img src={babyPic} alt="" />
+            <div className={`category_container_hover`}>
+              <span>Մանկական</span>
+            </div>
+          </li>
         </ul>
         <li
           className={`link_button ${active === "contact" && "active"}`}
