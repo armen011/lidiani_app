@@ -2,14 +2,13 @@ import React, { memo, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import logo from "../../../assets/img/lidiani_logo.png";
-import useWindowDimiisions from "../../../hooks";
-import "./style.scss";
 import womenPic from "../../../assets/img/women.png";
 import babyPic from "../../../assets/img/baby.png";
 import Icon from "../Icon";
 import Footer from "../Footer";
 import Modal from "../Modal";
 import { AnimatePresence } from "framer-motion";
+import "./style.scss";
 
 const LayoutWhithHeader = ({ childrenFunc }) => {
   const [isSubBarOpened, setIsSubBarOpened] = useState(false);
@@ -58,7 +57,7 @@ const LayoutWhithHeader = ({ childrenFunc }) => {
 
       <div className="header">
         <div className="logo_wrapper">
-          <img src={logo} alt="lidiani" />
+          <img src={logo} alt="lidiani" onClick={() => navigate("/")} />
         </div>
         <ul className="navbar">
           <li

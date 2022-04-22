@@ -17,8 +17,11 @@
 }
 
 body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 3px;
   }
 
   /* Track */
@@ -35,5 +38,8 @@ body {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+  a {
+    text-decoration: none;
   }
 }

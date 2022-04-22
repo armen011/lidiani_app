@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Icon from "../Icon";
 import "./style.scss";
 
@@ -13,14 +13,14 @@ const Footer = React.forwardRef((props, ref) => {
           <Icon iconName="contact_position" width={32} height={32} />
           <span>ք Գյումրի, Անի թաղամաս 7</span>
         </div>
-        <div className="info_text_with_icon">
+        <a href="tel:+37498453094" className="info_text_with_icon">
           <Icon iconName="contact_phone" width={32} height={32} />
           <span>+374 (98) 45-30-94</span>
-        </div>
-        <div className="info_text_with_icon">
+        </a>
+        <a href="mailto:lidianiboutique@mai.ru" className="info_text_with_icon">
           <Icon iconName="contact_email" width={32} height={32} />
           <span>lidianiboutique@mai.ru</span>
-        </div>
+        </a>
         <div className="info_text_insta_fb">
           <a href="./" className="icon_text_href">
             <Icon iconName="contact_fb" width={33} height={32} />
@@ -44,4 +44,4 @@ const Footer = React.forwardRef((props, ref) => {
   );
 });
 
-export default Footer;
+export default memo(Footer);

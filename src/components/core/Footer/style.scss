@@ -28,6 +28,7 @@
       height: 32px;
       margin-bottom: 24px;
       display: flex;
+      cursor: pointer;
       span {
         font-family: Montserrat;
         font-style: normal;
@@ -36,6 +37,7 @@
         line-height: 32px;
         color: #333333;
         margin-left: 16px;
+        text-decoration: none;
       }
     }
     .info_text_insta_fb {
@@ -73,6 +75,99 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1660px) {
+  .main_footer {
+    padding: 64px;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .main_footer {
+    height: auto;
+    flex-direction: column;
+    .info_text {
+      width: 100%;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .info_text_title {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+      }
+      .info_text_with_icon {
+        width: 400px;
+      }
+      .info_text_insta_fb {
+        bottom: -394px;
+      }
+    }
+    .info_map {
+      width: 100%;
+      height: 300px;
+      background: rgb(204, 197, 197);
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 666px) {
+  .main_footer {
+    padding: 16px;
+    .info_text {
+      min-height: 260px;
+      align-items: flex-start;
+      .info_text_title {
+        width: 400px;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 24px;
+        height: 30px;
+        span {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+      .info_text_with_icon {
+        width: 320px;
+        height: 24px;
+        margin-bottom: 16px;
+        span {
+          font-size: 16px;
+          line-height: 24px;
+          margin-left: 8px;
+        }
+        svg {
+          transform: scale(0.8);
+        }
+      }
+      .info_text_insta_fb {
+        bottom: -344px;
+        .icon_text_href {
+          span {
+            font-size: 14;
+            line-height: 20;
+          }
+        }
+        svg {
+          transform: scale(0.8);
+        }
+      }
+    }
+    .info_map {
+      height: 256px;
+      border-radius: 16px;
+      overflow: hidden;
     }
   }
 }

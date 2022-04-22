@@ -20,7 +20,7 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
         </div>
         <Slider className="slider_wrapper" />
       </div> */}
-      {/* <div className="second_section">
+      <div className="second_section">
         <div className="top_tree_title_wrapper">
           <span>Ամենաշատ Հավանած</span>
         </div>
@@ -44,8 +44,8 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
             </div>
           </div>
         </div>
-      </div> */}
-      {/* <div className="additional_info_bar">
+      </div>
+      <div className="additional_info_bar">
         <div className="info_container">
           <Icon iconName="additional_info_customer" width={128} height={128} />
           <div className="info_text_container">
@@ -60,8 +60,8 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
             <span>Զգեստներ</span>
           </div>
         </div>
-      </div> */}
-      {/* <div className="about_section" ref={aboutRef}>
+      </div>
+      <div className="about_section" ref={aboutRef}>
         <div className="about_text">
           <h3>Մեր Մասին</h3>
           <span>
@@ -79,7 +79,7 @@ const HomePage = ({ homeRef, aboutRef, contactRef, deliveryRef }) => {
         <div className="about_pic_wrapper">
           <img src={aboutPic} alt="" />
         </div>
-      </div> */}
+      </div>
       {/* <div className="info_about_our_clients">
         <div className="text_wrapper_about_clients">
           <p>Մեր Հաճախորդները Նրբաճաշակ են և Նորաոճ </p>

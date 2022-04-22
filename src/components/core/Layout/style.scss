@@ -7,6 +7,8 @@
     width: 100%;
     height: 80px;
     // overflow: hidden;
+    position: fixed;
+    top: 0;
     background: #ffffff;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
     display: flex;
@@ -55,9 +57,7 @@
         transition: 300ms;
       }
     }
-    .navbar_mobile {
-      display: none;
-    }
+
     .logo_wrapper {
       width: 120px;
       height: 100%;
@@ -68,12 +68,111 @@
       }
     }
   }
+  .navbar_mobile {
+    width: 0;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 64px;
+    transition: 200ms;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    .menu_title {
+      font-family: Montserrat arm;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      color: #333333;
+      margin: 24px;
+    }
+
+    .link_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      font-family: Montserrat;
+      font-size: 16px;
+      line-height: 24px;
+      color: #333333;
+      margin-left: 24px;
+      cursor: pointer;
+      transition: 300ms;
+      margin-bottom: 16px;
+    }
+    .sub_bar_wrapper {
+      width: 75%;
+      height: 224px;
+      margin: 0;
+      margin: 0px 24px 32px 24px;
+      overflow: hidden;
+      transition: 300ms;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sub_bar_closed {
+      height: 0;
+      margin-bottom: 0;
+    }
+    .category_container_mobile {
+      width: 100%;
+      height: 104px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+      .category_container_hover {
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(
+          180deg,
+          rgba(35, 35, 35, 0) 0%,
+          rgba(35, 35, 35, 0.5) 100%
+        );
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms;
+        span {
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+      }
+    }
+    .active {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: black;
+      transition: 300ms;
+    }
+  }
   .sub_bur_container_opened {
     width: 100%;
     height: 272px;
     position: absolute;
     background-color: white;
-    top: 80px;
+    top: 64px;
     overflow: hidden;
     transition: 300ms;
     display: flex;
@@ -86,7 +185,7 @@
     height: 0;
     background-color: white;
     position: absolute;
-    top: 80px;
+    top: 64px;
     overflow: hidden;
     transition: 300ms;
     display: flex;
@@ -142,15 +241,18 @@
   }
 
   .children_container {
+    position: fixed;
+    top: 80px;
     width: 100%;
     height: calc(100% - 80px);
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
 
   @media only screen and (max-width: 1160px) {
     .header {
       // background-color: green;
+      height: 64px;
       position: relative;
       .hamburger_wrapper_closed {
         width: 48px;
@@ -218,106 +320,16 @@
       display: none;
     }
 
-    .navbar_mobile {
-      width: 0;
-      height: 100%;
-      background-color: white;
-      z-index: 1;
-      display: flex;
-      position: absolute;
-      right: 0;
-      top: 80px;
-      transition: 200ms;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      box-sizing: border-box;
-      .menu_title {
-        font-family: Montserrat arm;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 32px;
-        color: #333333;
-        margin: 24px;
-      }
-      .link_button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        font-family: Montserrat;
-        font-size: 16px;
-        line-height: 24px;
-        color: #333333;
-        margin-left: 24px;
-        cursor: pointer;
-        transition: 300ms;
-        margin-bottom: 16px;
-      }
-      .sub_bar_wrapper {
-        width: 75%;
-        height: 224px;
-        margin: 0;
-        margin: 0px 24px 32px 24px;
-        overflow: hidden;
-        transition: 300ms;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .sub_bar_closed {
-        height: 0;
-        margin-bottom: 0;
-      }
-      .category_container_mobile {
-        width: 100%;
-        height: 104px;
-        border-radius: 8px;
-        overflow: hidden;
-        position: relative;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: fill;
-        }
-        .category_container_hover {
-          width: 100%;
-          height: 40px;
-          background: linear-gradient(
-            180deg,
-            rgba(35, 35, 35, 0) 0%,
-            rgba(35, 35, 35, 0.5) 100%
-          );
-          position: absolute;
-          bottom: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: 300ms;
-          span {
-            font-family: Montserrat;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            color: #ffffff;
-          }
-        }
-      }
-      .active {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;
-        color: black;
-        transition: 300ms;
-      }
-    }
     .opened {
       width: 340px;
+    }
+    .children_container {
+      top: 64px;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .opened {
+      width: 100%;
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
 import { dropIn } from "./animation";
@@ -78,4 +78,4 @@ const Modal = ({ handleClose }) => {
   );
 };
 
-export default Modal;
+export default memo(Modal);
